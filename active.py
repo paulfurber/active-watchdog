@@ -3,6 +3,7 @@
 # takes TBM xml data and produces content.lua
 
 import os
+import sys
 import xml.etree.cElementTree as cET
 import xml.etree.ElementTree as ET
 
@@ -166,3 +167,5 @@ def write(xml_file):
     f.write("return content\n")
     f.close()
 
+if __name__=='__main__':
+    write(sys.argv[1])
